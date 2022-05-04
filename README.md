@@ -1,1 +1,1 @@
-# Royalty-Cal
+# LoyaltyCalculator
