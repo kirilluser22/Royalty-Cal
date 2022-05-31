@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <RootNamespace>Retailer_Winning_Formula.Models</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LibWkHtmlToX-32" Version="0.12.6.1" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!--<ProjectReference Include="..\Retailer-Winning-Formula.Entities\Retailer-Winning-Formula.Entities.csproj" />-->
+  </ItemGroup>
+
+</Project>
