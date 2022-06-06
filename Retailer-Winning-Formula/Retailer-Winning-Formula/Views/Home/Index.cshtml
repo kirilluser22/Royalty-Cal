@@ -1,0 +1,1204 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor _httpContextAccessor
+@model DefaultValuesUpdateModal
+@{
+    ViewData["Title"] = "Home Page";
+    decimal avgPlanRetailValue = Convert.ToDecimal(_httpContextAccessor.HttpContext.Session.GetString(Constants.DefaultValues.AvgMonthlyRetailValue));
+    decimal avgTicketValue = Convert.ToDecimal(_httpContextAccessor.HttpContext.Session.GetString(Constants.DefaultValues.AvgTicketValue));
+}
+<div class="tip__block">
+    <div class="container">
+        <div class="tip__top ms-auto me-auto">
+            <h2 class="text-center  mt-0 mb-0">Success Tips for Building a Valuable <br> Home Furnishings Business</h2>
+            <span id="web-root3" style="display: none">@($"{_httpContextAccessor.HttpContext.Request.Scheme}://{_httpContextAccessor.HttpContext.Request.Host.Value}")</span>
+        </div>
+
+        <div class="navigation__tip">
+            <p>SUCCESS TIPS:</p>
+            <ul>
+                <li class="active__navigation"><a href="#" data-navigation="tip__block">Loyalty</a></li>
+                <li><a href="#" data-navigation="navigation2">SmartOne</a></li>
+                <li><a href="#" data-navigation="navigation3">Smarter Living</a></li>
+                <li><a href="#" data-navigation="tip__second">SmartPerks</a></li>
+                <li><a href="#" data-navigation="determine__block">Winning Formula</a></li>
+                <li><a href="#" data-navigation="contact__block">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="tip__bottom d-flex align-items-center relative">
+        <div class="container">
+            <div class="tip__info">
+                <div class="tip__test">
+                    <div class="tip__hint d-flex justify-content-start align-items-center mb-3 mb-lg-4">
+                        <p class="m-0">SUCCESS TIP 1</p>
+                    </div>
+                    <h2 class="mb-4 mb-lg-5">Loyal relationships deliver real value.</h2>
+                    <h6>How to create Customers-for-Life</h6>
+                    <p class="mb-2">	Building loyal customer relationships means going above and beyond the initial purchase. By combining an exceptional customer experience with superior service and support you create a powerful competitive advantage.</p>
+                    <p class="mb-2">
+                        When customers discover the cost-saving benefits of an ongoing repair and replacement program for their household furnishings, bedding and major appliances, you are in the best position to create Customers-for-Life.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="tip__image">
+            <img src="img/tipimage.jpg" alt="tipimage">
+        </div>
+    </div>
+</div>
+<div class="loyalty__block  d-flex justify-content-between">
+    <div class="loyalty__left d-flex align-items-center justify-content-center">
+
+        <video class="video-container" src="https://zucorahome.com/wp-content/uploads/2022/01/Why-Loyalty-Wins-compressed.mp4" controls="" playsinline="" controlslist="nodownload" poster="../img/Loyalty-wins.jpg" aria-label="A female smiling and hands up as a gesture of win.">
+        </video>
+    </div>
+    <div class="loyalty__right d-flex align-items-start justify-content-center flex-column">
+        <div class="loyalty__info">
+            <h6 class="">Why Loyalty Wins.</h6>
+            <p>	Building Iong-term customer relationships is a major factor in business success.</p>
+            <ul>
+                <li class="d-flex"><span><img src="img/loyaltyicon.svg" alt="loyalty"></span> Loyal customers buy more often</li>
+                <li class="d-flex"><span><img src="img/loyaltyicon.svg" alt="loyalty"></span> Returning customers cost less and tend to buy more</li>
+                <li class="d-flex"><span><img src="img/loyaltyicon.svg" alt="loyalty"></span> Long buying cycles makes it hard to  create loyal customers</li>
+                <li class="d-flex"><span><img src="img/loyaltyicon.svg" alt="loyalty"></span> Loyal customers increase revenue and builds lifetime value</li>
+                <li class="d-flex"><span><img src="img/loyaltyicon.svg" alt="loyalty"></span> Loyalty strategies create a significant competitive advantage</li>
+            </ul>
+            <div class="loyalty__download d-flex align-items-center justify-content-start">
+                <div class="download__image d-flex align-items-center justify-content-center">
+                    <img src="img/loyaltydownload.svg" alt="download">
+                </div>
+                <div class="download__info">
+                    <h6><span>Report:</span> Creating Customers-for-Life</h6>
+                    <a href="https://zucorahome.com/wp-content/uploads/2022/01/B3_Report_Customers-For-Life.pdf" target="_blank">DOWNLOAD</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--new loyalty block ends-->
+<div class="simplay__way navigation2">
+    <div class="container">
+        <div class="navigation__tip">
+            <p>SUCCESS TIPS:</p>
+            <ul>
+                <li><a href="#" data-navigation="tip__block">Loyalty</a></li>
+                <li class="active__navigation"><a href="#" data-navigation="navigation2">SmartOne</a></li>
+                <li><a href="#" data-navigation="navigation3">Smarter Living</a></li>
+                <li><a href="#" data-navigation="tip__second">SmartPerks</a></li>
+                <li><a href="#" data-navigation="determine__block">Winning Formula</a></li>
+                <li><a href="#" data-navigation="contact__block">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="outer__simple">
+            <div class="simple__left mb-md-5 mb-lg-0">
+                <div class="tip__hint d-flex justify-content-start align-items-center">
+                    <p class="m-0">SUCCESS TIP 2</p>
+                </div>
+                <h2 class="mb-4 mb-lg-5">A simple way to increase profitability.</h2>
+                <h6 class="mb-3">Complete. Easy. Profitable.</h6>
+                <p>
+                    Discover how SmartOne has become the industry’s simplest and most
+                    profitable protection plan for furniture, bedding and major appliances.
+                </p>
+                <p>
+                    SmartOne includes comprehensive coverage for accidental stains,
+                    damage and costs of repairs, parts, labour and product replacement.
+                </p>
+                <p>
+                    SmartOne plans are customer self-activated - which means no more administration headaches with no plans to register, no data to submit and no compulsory kits to buy.
+                </p>
+                <p>By offering more with each customer transaction you create additional value while increasing profitability.</p>
+                <p>Easy to sell and easy to profit.</p>
+            </div>
+            <div class="simple__right">
+                <div class="simple__video">
+                    <div class="simple__placeholder">
+                        <!--style="background:url('img/simple1.png')"
+                                 <a href="#">
+                                <img src="img/playbutton.svg" alt="playbutton">
+                            </a>
+                            -->
+                        <video class="video-container" src="https://zucorahome.com/wp-content/uploads/2022/01/The-SmartOne-Advantage-compressed.mp4" controls="" playsinline="" controlslist="nodownload" poster="../img/simple1.png">
+                        </video>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="advantage__block">
+    <div class="container">
+        <div class="outer__advantage">
+            <div class="advantage__left">
+                <a href="#">
+                    <sup>TM</sup>
+                    <img src="img/advantageimage.svg" alt="advantageimage">
+                </a>
+                <div class="download__advantage">
+                    <div class="advantage__left">
+                        <img src="img/advantagedownload.png" alt="advantagedownload">
+                    </div>
+                    <div class="advantage__right--small">
+                        <h6><span>Discover</span> SmartOne</h6>
+                        <a href="https://www.flipsnack.com/zucorahome/smartone-booklet-xhpychxwb1/full-view.html" target="_blank">DOWNLOAD</a>
+                    </div>
+                </div>
+            </div>
+            <div class="advantage__right">
+                <h2>The SmartOne Advantage.</h2>
+                <h6>Learn how the industry's most powerful product protection plan creates loyal Customers.</h6>
+                <ul>
+                    <li>
+                        <span><img src="img/advantage1.svg" alt="advantage"></span> SmartOne is the complete protection solution for individual product purchases of furniture, bedding and major appliances.
+                    </li>
+                    <li><span><img src="img/advantage2.svg" alt="advantage"></span> Full coverage for parts, labour and product replacement</li>
+                    <li>
+                        <span><img src="img/advantage3.svg" alt="advantage"></span> No plan registrations required, no customer information to manage and no data files to submit
+                    </li>
+                    <li><span><img src="img/advantage4.svg" alt="advantage"></span> Low fixed plan cost provides maximum  profitability</li>
+                    <li>
+                        <span><img src="img/advantage5.svg" alt="advantage"></span> Includes incentive-based upgrades to Smarter Living, creating an additional revenue opportunity.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="grid__wrapper navigation3">
+
+    <div class="simplay__way">
+        <div class="container">
+            <div class="navigation__tip">
+                <p>SUCCESS TIPS:</p>
+                <ul>
+                    <li><a href="#" data-navigation="tip__block">Loyalty</a></li>
+                    <li><a href="#" data-navigation="navigation2">SmartOne</a></li>
+                    <li class="active__navigation"><a href="#" data-navigation="navigation3">Smarter Living</a></li>
+                    <li><a href="#" data-navigation="tip__second">SmartPerks</a></li>
+                    <li><a href="#" data-navigation="determine__block">Winning Formula</a></li>
+                    <li><a href="#" data-navigation="contact__block">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="outer__simple">
+                <div class="simple__left">
+                    <div class="tip__hint d-flex justify-content-start align-items-center">
+                        <p class="m-0">SUCCESS TIP 3</p>
+                    </div>
+                    <h2 class="mb-4 mb-lg-5">When life happens, we <br> make it better.</h2>
+                    <h6 class="mb-3">practical. convenient. valuable.</h6>
+                    <p class="mb-2">
+                        Creating customers-for-life is easy when SmartOne customers enroll in a
+                        Smarter Living Plan – an affordable monthly subscription service that covers
+                        all of their home furnishings, appliances and even their home systems.
+                    </p>
+                    <p>
+                        More coverage and increased service also means greater opportunities for
+                        your business and an on-going source of new recurring revenue that
+                        constantly increases - while providing incentives for your customers to
+                        return to buy more.
+                    </p>
+                </div>
+                <div class="simple__right">
+                    <div class="simple__video">
+                        <!--<div class="simple__placeholder" style="background:url('img/simple2.png')">
+                            <a href="#">
+                                <img src="img/playbutton.svg" alt="playbutton">
+                            </a>
+                        </div>-->
+                        <div>
+                            <video src="https://zucorahome.com/wp-content/uploads/2022/01/SLP60-compressed.mp4" class="video-container" controls="" playsinline="" controlslist="nodownload" poster="img/simple2.png"></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grid__block">
+        <div class="container">
+            <div class="outer__grid">
+                <img src="img/gridline.png" alt="grid" class="grid__line">
+                <div class="grid__elem">
+                    <div class="grid__image">
+                        <img src="img/grid1.png" alt="grid">
+                    </div>
+                    <div class="grid__info">
+                        <p>A Smarter Living Plan is the practical solution that helps families avoid unexpected repair costs - regardless of the product’s age or where it was purchased.</p>
+                    </div>
+                </div>
+
+                <div class="grid__elem">
+                    <div class="grid__image">
+                        <img src="img/grid2.png" alt="grid">
+                    </div>
+                    <div class="grid__info">
+                        <p>Life is better when parts, labour and replacement are covered. A small trade service fee dispatches a technician from our national network of service experts.</p>
+                    </div>
+                </div>
+
+
+                <div class="grid__elem">
+                    <div class="grid__image">
+                        <img src="img/grid3.png" alt="grid">
+                    </div>
+                    <div class="grid__info">
+                        <p>Enrolment incentives and SmartPerks™ Rewards for every subscription payment can be converted to gift cards - returning your customers to your store to buy more.</p>
+                    </div>
+                </div>
+
+                <div class="grid__elem">
+                    <div class="grid__image">
+                        <img src="img/grid4.png" alt="grid">
+                    </div>
+                    <div class="grid__info">
+                        <p>The best part? Smarter Living generates a new enduring source of revenue as long as your customer remains a plan member!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="make__easy">
+    <div class="container">
+        <div class="outer__easy">
+            <div class="easy__left">
+                <a href="#">
+                    <sup>TM</sup>
+                    <img src="img/easyimage.svg" alt="easyimage">
+                </a>
+                <div class="easy__download">
+                    <div class="easy__image">
+                        <img src="img/easydownload.png" alt="easydownload">
+                    </div>
+                    <div class="easy__info">
+                        <h6><span>Discover:</span> Smarter Living</h6>
+                        <a href="https://www.flipsnack.com/zucorahome/smarter-living-booklet-u8azl831ci/full-view.html" target="_blank">DOWNLOAD</a>
+                    </div>
+                </div>
+            </div>
+            <div class="easy__right">
+                <h2 class="mt-0 mb-4 mb-lg-5">We make it easy.</h2>
+                <h6>See how a Smarter Living Plan makes it easier to protect family budgets while creating life time customers.</h6>
+                <ul>
+                    <li class="mb-4">
+                        <span><img src="img/easy1.svg" alt="easy"></span> Smarter Living Plans cover all household
+                        furnishings, major appliances and home systems –
+                        regardless of age or where previously purchased.
+                    </li>
+                    <li class="mb-4"><span><img src="img/easy2.svg" alt="easy"></span> A low monthly subscription includes coverage for parts, labour and product replacement.</li>
+                    <li class="mb-4"><span><img src="img/easy3.svg" alt="easy"></span> Enrolment incentives and SmartPerks™ Rewards returns customers to buy more</li>
+                    <li><span><img src="img/easy4.svg" alt="easy"></span> A new source of monthly revenue for your business</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tip__block tip__second">
+    <div class="tip__bottom d-flex align-items-center relative">
+        <div class="container">
+            <div class="navigation__tip">
+                <p>SUCCESS TIPS:</p>
+                <ul>
+                    <li><a href="#" data-navigation="tip__block">Loyalty</a></li>
+                    <li><a href="#" data-navigation="navigation2">SmartOne</a></li>
+                    <li><a href="#" data-navigation="navigation3">Smarter Living</a></li>
+                    <li class="active__navigation"><a href="#" data-navigation="tip__second">SmartPerks</a></li>
+                    <li><a href="#" data-navigation="determine__block">Winning Formula</a></li>
+                    <li><a href="#" data-navigation="contact__block">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="tip__info">
+                <div class="tip__test">
+                    <div class="tip__hint tip__hint d-flex justify-content-start align-items-center mb-3 mb-lg-4">
+                        <p class="m-0">SUCCESS TIP 4</p>
+                    </div>
+                    <h2 class="mb-4 mb-lg-5">Loyalty is very rewarding.</h2>
+                    <p class="mt-0 mb-4">
+                        Build customer loyalty with exclusive SmartPerks™ Rewards. Customers receive
+                        valuable enrolment incentives together with the opportunity to earn ongoing
+                        SmartPerks™ Rewards with every monthly subscription payment – giving customers a
+                        powerful incentive to return more often to buy more merchandise.
+                    </p>
+                    <ul class="reward__list">
+                        <li>
+                            <span><img src="img/reward2.svg" alt="reward"></span> When your customer enrolls in a Smarter Living Plan, you are well on your
+                            way to creating a lifelong relationship.
+                        </li>
+                        <li>
+                            <span><img src="img/reward3.svg" alt="reward"></span> Your customer instantly receives SmartPerks™ Rewards when they enroll in a
+                            Smarter Living Plan and with every monthly subscription payment.
+                        </li>
+                        <li>
+                            <span><img src="img/reward4.svg" alt="reward"></span> SmartPerks™ Rewards can be redeemed at anytime for valuable Gift Cards
+                            to purchase more merchandise from your business.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tip__image">
+            <img src="img/rewardimage.png" alt="tipimage">
+        </div>
+    </div>
+</div>
+
+
+<div class="perks__block">
+    <div class="container">
+        <div class="outer__perks">
+            <div class="head__perks">
+                <a href="#">
+                    <sup>TM</sup>
+                    <img src="img/perkslogo.png" alt="perkslogo">
+                </a>
+            </div>
+            <div class="perks__inner">
+                <div class="elem__perks">
+                    <div class="perks__image">
+                        <img src="img/perks1.svg" alt="perks">
+                        <h6>Incentives</h6>
+                    </div>
+                    <div class="perks__info">
+                        <h6>Incentives</h6>
+                        <p>
+                            Customers can receive valuable SmartPerks™ Rewards as an
+                            enrolment incentive when they upgrade to a Smarter Living Plan.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="elem__perks">
+                    <div class="perks__image">
+                        <img src="img/perks2.svg" alt="perks">
+                        <h6>Instant</h6>
+                    </div>
+                    <div class="perks__info">
+                        <h6>Instant</h6>
+                        <p>SmartPerks™ Rewards can be instantly converted to a redeemable gift card to buy more merchandise from you. You receive 100% of the value of the gift card!</p>
+                    </div>
+                </div>
+
+                <div class="elem__perks">
+                    <div class="perks__image">
+                        <img src="img/perks3.svg" alt="perks">
+                        <h6>Forever</h6>
+                    </div>
+                    <div class="perks__info">
+                        <h6>Forever</h6>
+                        <p>
+                            Smarter Living keeps on rewarding. As long as your customer remains a Smarter Living Member, SmartPerks™ Rewards are earned with every monthiy subscription plan payment. More rewards and more reasons to return to buy from you.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="perks__download">
+                    <div class="download__image">
+                        <img src="img/perksdownload.png" alt="perksdownload">
+                    </div>
+                    <div class="download__info">
+                        <h6><span>Discover:</span> SmartPerks™ Rewards</h6>
+                        <a href="https://www.flipsnack.com/zucorahome/smartperks-booklet-7x94kct6rh/full-view.html" target="_blank">DOWNLOAD</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="determine__block">
+    <div class="container">
+        <div class="navigation__tip">
+            <p>SUCCESS TIPS:</p>
+            <ul>
+                <li><a href="#" data-navigation="tip__block">Loyalty</a></li>
+                <li><a href="#" data-navigation="navigation2">SmartOne</a></li>
+                <li><a href="#" data-navigation="navigation3">Smarter Living</a></li>
+                <li><a href="#" data-navigation="tip__second">SmartPerks</a></li>
+                <li class="active__navigation"><a href="#" data-navigation="determine__block">Winning Formula</a></li>
+                <li><a href="#" data-navigation="contact__block">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="outer__determine">
+            <div class="determine__top">
+                <div class="determine__title">
+                    <div class="title__left">
+                        <p>SUCCESS TIP 5</p>
+                        <h6>Determine your winning formula.</h6>
+                    </div>
+                    <div class="title__right">
+                        <p>
+                            In 3 easy steps, discover how to benefit by
+                            offering SmartOne with additional revenue advantages when
+                            customers enroll in a Smarter Living Plan:
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="determine__grid">
+                <div class="elem__determine--grid">
+                    <div class="determine__image">
+                        <img src="img/determine1.svg" alt="determine">
+                    </div>
+                    <div class="determine__info">
+                        <p>
+                            <span>Step 1:</span> Enter the success factors that
+                            represent your business – now or in the future.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="elem__determine--grid">
+                    <div class="determine__image">
+                        <img src="img/determine2.svg" alt="determine">
+                    </div>
+                    <div class="determine__info">
+                        <p><span>Step 2:</span> Select “Calculate” to provide your success projection. </p>
+                    </div>
+                </div>
+
+                <div class="elem__determine--grid">
+                    <div class="determine__image">
+                        <img src="img/determine3.svg" alt="determine">
+                    </div>
+                    <div class="determine__info">
+                        <p>
+                            <span>Step 3:</span> View the summary analysis and
+                            download a detailed report of your projections.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <form asp-action="CalculateSummary" id="frmCalculateSummary" name="frmCalculateSummary">
+                <input hidden id="AnnualSalesVolume" name="AnnualSalesVolume" value="" />
+                <input hidden id="PercentageOfRevenuePlanSales" name="PercentageOfRevenuePlanSales" value="" />
+                <input hidden id="SalesAssociateCommission" name="SalesAssociateCommission" value="" />
+                <input hidden id="SlpPotentialEnrolments" name="SlpPotentialEnrolments" value="" />
+                <div class="calculate__determine">
+                    <input type="button" id="resetSummary" class="float__right apply__NowBtn mb-3" value="Reset">
+                    <h2>Calculate your success.</h2>
+                    <p>Choose your success factors and select Calculate to determine projections.</p>
+                    <div class="calculate__inner">
+                        <div class="elem__calculate">
+                            <div class="calculate__title">
+                                <h6>Annual Retail Revenue.</h6>
+                                <p>Estimate your total annual revenue.</p>
+                                <span>(Default: $5.0M Revenue)</span>
+                            </div>
+                            <div class="calculate__range">
+                                <input id="ex1" class="slider" data-slider-id='ex1Slider' type="text" data-slider-min="1.0" data-slider-max="50.0" data-slider-step="0.25" data-slider-value="5.0" />
+                                <div>
+                                    <span class="grey__color">$ 1M</span>
+                                    <span class="grey__color float__right">$ 50M</span>
+                                </div>
+                            </div>
+                            <div class="calculate__result">
+                                <p class="calculate__result__minWidth">$ <span id="annualRetailRevenue">5.0</span></p>
+                                <span>Annual Revenue</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="elem__calculate">
+                            <div class="calculate__title">
+                                <h6>Percentage Annual Revenue from protection plan sales.</h6>
+                                <p>Determine the volume of protection plan revenue as a percentage of the Annual retail Revenue above. (Industry ranges: Low 2% | Medium: 5% | High 8%)</p>
+                                <span>(Industry Average: 5%)</span>
+                            </div>
+                            <div class="calculate__range">
+                                <input id="ex2" class="slider" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="15" data-slider-step="1" data-slider-value="5" />
+                                <div>
+                                    <span class="grey__color">1%</span>
+                                    <span class="grey__color float__right">15%</span>
+                                </div>
+                            </div>
+                            <div class="calculate__result">
+                                <p><span id="percentageAnnualRevenue">5%</span></p>
+                                <span>Percent Plan Sales</span>
+                            </div>
+                        </div>
+
+                        <div class="elem__calculate">
+                            <div class="calculate__title">
+                                <h6>Sales commission percentage paid to Sales Associates for Plans.</h6>
+                                <p>Select the percentage commission paid to your Sales Associates for sale of protection plans. (Typicaly 5% - 30%)</p>
+                                <span>(Industry Average: 20%)</span>
+                            </div>
+                            <div class="calculate__range">
+                                <input id="ex3" class="slider" data-slider-id='ex1Slider' type="text" data-slider-min="5" data-slider-max="50" data-slider-step="1" data-slider-value="20" />
+                                <div>
+                                    <span class="grey__color">5%</span>
+                                    <span class="grey__color float__right">50%</span>
+                                </div>
+                            </div>
+                            <div class="calculate__result">
+                                <p><span id="salesCommissionPercentage">20</span></p>
+                                <span>Associate  Commission</span>
+                            </div>
+                        </div>
+
+                        <div class="elem__calculate">
+                            <div class="calculate__title">
+                                <h6>Smarter Living Potential Enrolments.</h6>
+                                <p>Estimate the percentage of customers purchasing a SmartOne plan who are likely to enrol in a Smarter Living Plan (Target: 20% or more)</p>
+                                <span>(Default: 10%)</span>
+                            </div>
+                            <div class="calculate__range">
+                                <input id="ex4" class="slider" data-slider-id='ex1Slider' type="text" data-slider-min="5" data-slider-max="50" data-slider-step="1" data-slider-value="10" />
+                                <div>
+                                    <span class="grey__color">5%</span>
+                                    <span class="grey__color float__right">50%</span>
+                                </div>
+                            </div>
+                            <div class="calculate__result">
+                                <p><span id="smarterLivingPotentialPercentage">10</span></p>
+                                <span>Enrolment  Conversions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="calculate__after">
+                    <div class="calculate__after--info">
+                        <div class="head__calculate">
+                            <p>Other factors* used to calculate projections: <a href="#" data-toggle="modal" data-target="#exampleModal"><img src="img/editicon.svg" alt="editicon"></a></p>
+                        </div>
+                        <table id="otherFactosTable">
+                            <tr>
+                                <td><p>Average Ticket Value</p></td>
+                                <td><span>@avgTicketValue.ToAmount()</span></td>
+                            </tr>
+                            <tr>
+                                <td><p>Average Plan Retail Value</p></td>
+                                <td><span>@avgPlanRetailValue.ToAmount()</span></td>
+                            </tr>
+                        </table>
+                        <span>* Based on industry averages. </span>
+                    </div>
+                    <input type="button" class="darkPurpleBg-btn" id="calculateSummary" value="CALCULATE">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="success__block d-none mt-5">
+</div>
+
+
+<div class="contact__block mt-5">
+    <div class="container">
+        <div class="navigation__tip">
+            <p>SUCCESS TIPS:</p>
+            <ul>
+                <li><a href="#" data-navigation="tip__block">Loyalty</a></li>
+                <li><a href="#" data-navigation="navigation2">SmartOne</a></li>
+                <li><a href="#" data-navigation="navigation3">Smarter Living</a></li>
+                <li><a href="#" data-navigation="tip__second">SmartPerks</a></li>
+                <li><a href="#" data-navigation="determine__block">Winning Formula</a></li>
+                <li class="active__navigation"><a href="#" data-navigation="contact__block">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="outer__contact">
+            @*<div class="contact__header">
+                <span>LET'S CONNECT!</span>
+                <h2>Get started today.</h2>
+                </div>*@
+            <div class="contact__inner">
+                <div class="contact__left">
+                    <div class="contact__header" style="margin-bottom:60px">
+                        <span>LET'S CONNECT!</span>
+                        <h2>Get started today.</h2>
+                    </div>
+                    <div class="contact__image">
+                        <img src="img/contactimage.jpg" alt="contactimage">
+                    </div>
+                    <div class="contact__desc">
+                        <h6>About ZucoraHome</h6>
+                        <p>
+                            ZucoraHome is Canada's Smarter Living Company. For more than
+                            40 years, we've been helping retailers deliver outstanding customer
+                            experience. With almost two million plan holders our produxt
+                            protection plans and home service loyalty prigrams deliver value
+                            every day. Discover more at <a href="https://zucorahome.com/">www.ZucoraHome.com</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="contact__right">
+                    <div class="contact__header" style="display:flex">
+                        <div style="width:50%">
+                            <h6 class="smarterPartner__Heading" style="">Become a Smarter Partner</h6>
+                            <p class="smarterPartner__HeadingDesc" style=''>
+                                I'm convinced! I'd like to apply online.
+                            </p>
+                        </div>
+                        <div class="apply__NowSection" style="width:50%">
+                            <a href="https://devloyaltycalculator.azurewebsites.net/SmartPartnerOnBoarding/Index" type="button" id="calculateSummary" class="apply__NowBtn text-uppercase" target="_blank">Apply now</a>
+                        </div>
+                    </div>
+                    <form action="" id="frmContactInfo">
+                        <div class="form__top">
+                            <h6>I need a bit more information</h6>
+                            <p>
+                                Discover how becoming a Smarter Partner can increase your bottom line while
+                                creating customers-for-life. Submit the information below and one of our
+                                specialists will connect to explain how.
+                            </p>
+                        </div>
+                        <div class="double__group">
+                            <div class="form__group">
+                                <p>First Name<span>*</span></p>
+                                <input type="text" id="ContactFirstName" name="ContactFirstName">
+                            </div>
+                            <div class="form__group">
+                                <p>Last Name<span>*</span></p>
+                                <input type="text" id="ContactLastName" name="ContactLastName">
+                            </div>
+                        </div>
+
+
+                        <div class="double__group">
+                            <div class="form__group">
+                                <p>Store Name</p>
+                                <input type="text" id="ContactStore" name="ContactStore">
+                            </div>
+                            <div class="form__group">
+                                <p>Location (City, Province)</p>
+                                <input type="text" id="ContactLocation" name="ContactLocation">
+                            </div>
+                        </div>
+
+                        <div class="double__group">
+                            <div class="form__group">
+                                <p>Email Address<span>*</span></p>
+                                <input type="text" placeholder="example@gmail.com" id="ContactEmail" name="ContactEmail">
+                            </div>
+                            <div class="form__group">
+                                <p>Phone Number</p>
+                                <input type="text" placeholder="+1" id="ContactPhoneNumber" name="ContactPhoneNumber" maxlength="10" onkeypress="return isWholeNumber(this, event);">
+                            </div>
+                        </div>
+                        <div class="double__group double__check">
+                            <div class="form__group">
+                                <p>Your ZucoraHome Rep's Name</p>
+                                <input type="text" id="ContactRepName" name="ContactRepName">
+                            </div>
+                            <div class="form__check">
+                                <div class="form-group" align="right">
+                                    <input type="checkbox" id="WhoMyRep" name="WhoMyRep">
+                                    <label for="WhoMyRep">I don’t know who my Rep is.</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__submit">
+                            <input type="submit" class="contactBtn" value="REQUEST MORE INFO">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 							<div class="chat__info">
+                                <a href="#"><span><img src="img/chatsmall.png" alt="chatsmall"></span> Chat Now</a>
+                            </div>
+ -->
+@section Scripts{
+<script src="~/lib/bootstrap/dist/js/bootstrap-slider.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+<script src="~/lib/jquery-validation/dist/additional-methods.min.js"></script>
+   @* <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/11.0.2/bootstrap-slider.min.js" integrity="sha512-f0VlzJbcEB6KiW8ZVtL+5HWPDyW1+nJEjguZ5IVnSQkvZbwBt2RfCBY0CBO1PsMAqxxrG4Di6TfsCPP3ZRwKpA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>*@
+<script>
+    $(document).ready(function () {
+        $('#ex1').slider({
+            tooltip: 'always',
+            formatter: function (value) {
+                let result = value % 1 == 0 ? value + ".0M" : value + "M"
+                $("#annualRetailRevenue").text(result)
+                $("#AnnualSalesVolume").val(value)
+                return result;
+            }
+        });
+        $('#ex2').slider({
+            tooltip: 'always',
+            formatter: function (value) {
+                let result = value + "%";
+                $("#percentageAnnualRevenue").text(result)
+                $("#PercentageOfRevenuePlanSales").val(value)
+                return result;
+            }
+        });
+        $('#ex3').slider({
+            tooltip: 'always',
+            formatter: function (value) {
+                let result = value + "%";
+                $("#salesCommissionPercentage").text(result)
+                $("#SalesAssociateCommission").val(value)
+                return result;
+            }
+        });
+        $('#ex4').slider({
+            tooltip: 'always',
+            formatter: function (value) {
+                let result = value + "%";
+                $("#smarterLivingPotentialPercentage").text(result)
+                $("#SlpPotentialEnrolments").val(value)
+                return result;
+            }
+        });
+
+        $("#frmContactInfo").validate({
+        rules: {
+            ContactFirstName: "required",
+            ContactLastName: "required",
+            ContactEmail: {
+                required: true,
+                email: true
+            },
+            ContactPhoneNumber: {
+                maxlength: 10,
+                minlength: 10,
+                digits: true
+            }
+        },
+        messages: {
+            ContactFirstName: "Contact First Name is required",
+            ContactLastName: "Contact Last Name is required",
+            ContactEmail: "Contact Email is required"
+        },
+        onfocusout: function (element) {
+            $(element).valid();
+        },
+        });
+    });
+    function isWholeNumber(txt, evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+
+    if (charCode > 31 && (charCode < 48 || charCode > 57))
+        return false;
+
+    return true;
+    }
+    function checkForZero() {
+        let val1 = $("#AvgTicketValue").val()
+        let val2 = $("#AvgMonthlyRetailValue").val()
+        if (val1 == 0 || val2 == 0) {
+            $(".factors-btn").addClass("disabled");
+            $(".factors-btn").prop("disabled", true);
+        }
+        else {
+            $(".factors-btn").removeClass("disabled");
+            $(".factors-btn").prop("disabled", false);
+        }
+        if (val1 == 0) {
+            $(".avgTicketValidationField").removeClass("d-none");
+        }
+        else {
+            $(".avgTicketValidationField").addClass("d-none");
+        }
+        if (val2 == 0) {
+            $(".avgMonthlyRetailValueValidationField").removeClass("d-none");
+        }
+        else {
+            $(".avgMonthlyRetailValueValidationField").addClass("d-none");
+        }
+    }
+    $("#calculateSummary").click(function () {
+        let formData = $("#frmCalculateSummary").serialize();
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("CalculateSummary")',
+            data: formData,
+            success: function (result) {
+                console.log(result);
+                $(".success__block").html(result);
+                $('.success__block').removeClass('d-none');
+                $('html').animate({
+                    scrollTop: $(".success__block").offset().top
+                }, 400);
+            },
+            error: function () {
+                alert('Failed to receive the Data');
+                console.log('Failed ');
+            }
+        })
+    })
+
+    $(".userInfo-btn").click(function () {
+        let val1=checkFirstName();
+        let val2 =checkLastName();
+        let val3 =checkEmail();
+        let val4 =checkStoreName();
+        let val5 = checkLocationName();
+        if (!(val1 && val2 && val3 && val4 && val5))
+            return false;
+        $(this).closest(".modal__form").fadeOut(300);
+        $("body,html").css("overflow-y", "auto");
+        let formData = $("#frmSendReport").serialize();
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("SendReport")',
+            data: formData,
+            success: function (result) {
+                console.log(result);
+                if (result != null) {
+                    $("#msgNotifierBody").html(result)
+                    $("#msgModal").modal();
+                }
+            },
+            error: function () {
+                alert('Failed to receive the Data');
+                console.log('Failed ');
+            }
+        })
+    })
+
+    $(".factors-btn").click(function () {
+         let formData = $("#frmUpdateSessionDefaultValues").serialize();
+        $.ajax({
+            type: 'POST',
+            url: '@Url.Action("UpdateSessionDefaultValues")',
+            data: formData,
+            success: function (result) {
+                console.log(result);
+                if (result != null) {
+                    $("#otherFactosTable").html(result);
+                    $("#msgNotifierBody").html("<p>Values Updated Successfully</p>")
+                    $("#msgModal").modal();
+                    console.log($("#sessionavgRetailValue").val());
+                    console.log($("#sessionavgTicketValue").val());
+                    $("#AvgMonthlyRetailValue").val($("#sessionavgRetailValue").val());
+                    $("#AvgTicketValue").val($("#sessionavgTicketValue").val());
+                }
+            },
+            error: function () {
+                alert('Failed to receive the Data');
+                console.log('Failed ');
+            }
+        })
+    })
+    $("#resetSummary").click(function () {
+        $('#ex1').slider('refresh', { useCurrentValue: false });
+        $('#ex2').slider('refresh', { useCurrentValue: false });
+        $('#ex3').slider('refresh', { useCurrentValue: false });
+        $('#ex4').slider('refresh', { useCurrentValue: false });
+        $("#frmSendReport")[0].reset();
+        $(".firstNameValidationField").addClass("d-none");
+        $(".lastNameValidationField").addClass("d-none");
+        $(".storeValidationField").addClass("d-none");
+        $(".locationValidationField").addClass("d-none");
+        $(".emailValidationField").addClass("d-none");
+    })
+
+</script>
+<script>
+    function checkFunction(param) {
+        if (param == "Yes")
+            $('#IsProductProtectionPlanOffered').val(true);
+        else
+            $('#IsProductProtectionPlanOffered').val(false);
+    }
+    function checkEmail() {
+        let val = $("#Email").val().trim();
+
+        var emailRegex = /^\w+([-+.'][^\s]\w+)*@@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+
+        if (emailRegex.test(val)) {
+            $(".emailValidationField").addClass("d-none");
+            return true;
+        }
+        else {
+            $(".emailValidationField").removeClass("d-none")
+            val = "";
+            return false;
+        }
+    }
+    function checkFirstName() {
+        let val1 = $("#FirstName").val().trim();
+        if (val1 == null || val1 == "") {
+            $(".firstNameValidationField").removeClass("d-none");
+            return false;
+        }
+        else {
+            $(".firstNameValidationField").addClass("d-none");
+            return true;
+        }
+    }
+    function checkLastName() {
+        let val1 = $("#LastName").val().trim();
+        if (val1 == null || val1 == "") {
+            $(".lastNameValidationField").removeClass("d-none");
+            return false;
+        }
+        else {
+            $(".lastNameValidationField").addClass("d-none");
+            return true;
+        }
+
+    }
+    function checkStoreName() {
+        let val1 = $("#Store").val().trim();
+        if (val1 == null || val1 == "") {
+            $(".storeValidationField").removeClass("d-none");
+            return false;
+        }
+        else {
+            $(".storeValidationField").addClass("d-none");
+            return true;
+        }
+    }
+    function checkLocationName() {
+        let val1 = $("#Location").val().trim();
+        if (val1 == null || val1 == "") {
+            $(".locationValidationField").removeClass("d-none");
+            return false;
+        }
+        else {
+            $(".locationValidationField").addClass("d-none");
+            return true;
+        }
+    }
+
+    $(".contactBtn").click(function(e){
+        e.preventDefault();
+        let isValid=$("#frmContactInfo").valid();
+        if(!isValid)
+        {
+            return false;
+        }
+        let store=$("#ContactStore").val().trim();
+        store=store==null || store==""?null:store;
+        let location=$("#ContactLocation").val().trim();
+        location=location==null || location==""?null:location;
+        let phoneNo=$("#ContactPhoneNumber").val().trim();
+        phoneNo=phoneNo==null || phoneNo==""?null:phoneNo;
+        let zucRep=$("#ContactRepName").val().trim();
+        zucRep=zucRep==null||zucRep==""?null:zucRep;
+        let isMyRep=$("#WhoMyRep").prop("checked")?true:false
+
+        
+        let contactJson={
+            "ContactFirstName":$("#ContactFirstName").val().trim(),
+            "ContactLastName":$("#ContactLastName").val().trim(),
+            "ContactEmail":$("#ContactEmail").val().trim(),
+            "ContactStore":$("#ContactStore").val().trim(),
+            "ContactLocation":$("#ContactLocation").val().trim(),
+            "ContactRepName":$("#ContactRepName").val().trim(),
+            "ContactPhoneNumber":$("#ContactPhoneNumber").val().trim(),
+            "WhoMyRep":isMyRep
+        };
+         $.ajax({
+            type: 'POST',
+            url: '/Contact/SendContactEmail',
+            data: contactJson,
+            success: function (result) {
+                console.log(result);
+                 $("#msgNotifierBody").html("<p>"+result+"</p>");
+                 $("#msgModal").modal();
+            },
+            error: function () {
+                alert('Failed to receive the Data');
+                console.log('Failed ');
+            }
+        })
+    });
+</script>
+}
+<div class="modal" id="msgModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: #434da0">
+                <h5 class="modal-title" style="color:white">Message</h5>
+                <a href="#">
+                    <img src="img/closeicon.png" style="width:20px" data-dismiss="modal" alt="closeicon">
+                </a>
+            </div>
+            <div class="modal-body" id="msgNotifierBody">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal__form" style="display:none;">
+    <div class="modal__box">
+        <div class="inner__modal">
+            <div class="head__modal">
+                <h2>YES! Email my Success  Report.</h2>
+                <a href="#">
+                    <img src="img/closeicon.png" alt="closeicon">
+                </a>
+            </div>
+            <form asp-action="SendReport" id="frmSendReport" name="frmSendReport">
+                <div class="double__modal">
+                    <div class="form__group">
+                        <p>First Name<span>*</span></p>
+                        <input type="text" id="FirstName" name="FirstName" onfocusout="checkFirstName()" onchange="checkFirstName()" autocomplete="off">
+                        <span class="text-danger d-none firstNameValidationField">FirstName is required</span>
+                    </div>
+                    <div class="form__group">
+                        <p>Last Name<span>*</span></p>
+                        <input type="text" id="LastName" name="LastName" onfocusout="checkLastName()" onchange="checkLastName()" autocomplete="off">
+                        <span class="text-danger d-none lastNameValidationField">Last Name is required</span>
+                    </div>
+                </div>
+                <div class="form__group">
+                    <p>Email Address<span>*</span></p>
+                    <input type="text" placeholder="example@gmail.com" id="Email" name="Email" onfocusout="checkEmail()" onchange="checkEmail()" autocomplete="off">
+                    <span class="text-danger d-none emailValidationField">Email is required</span>
+                </div>
+
+                <div class="form__group">
+                    <p>Store<span>*</span></p>
+                    <input type="text" id="Store" name="Store" onfocusout="checkStoreName()" onchange="checkStoreName()" autocomplete="off">
+                    <span class="text-danger d-none storeValidationField">Store is required</span>
+                </div>
+                <div class="form__group">
+                    <p>Location<span>*</span></p>
+                    <input type="text" id="Location" name="Location" onfocusout="checkLocationName()" onchange="checkLocationName()" autocomplete="off">
+                    <span class="text-danger d-none locationValidationField">Location is required</span>
+                </div>
+                <div class="form__double--radio">
+                    <p>Do You currently offer Product Protection Plans?</p>
+                    <div class="radio__wrapper">
+                        <div class="elem__radio">
+                            <input type="hidden" id="IsProductProtectionPlanOffered" name="IsProductProtectionPlanOffered" value="true">
+                            <p>
+                                <input type="radio" id="test1" name="radio-group" checked onclick='checkFunction("Yes")'>
+                                <label for="test1">Yes</label>
+                            </p>
+                        </div>
+
+                        <div class="elem__radio">
+                            <p>
+                                <input type="radio" id="test2" name="radio-group" onclick='checkFunction("No")'>
+                                <label for="test2">No</label>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="group__submit">
+                    <input type="button" class="userInfo-btn darkPurpleBg-btn" value="SUBMIT">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+@*modal*@
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header background-stnd-purple" style="background-color: #434da0">
+                <h5 class="modal-title" id="exampleModalLabel" style="color:white">Other factors* used to calculate projections:</h5>
+                <a href="#">
+                    <img src="img/closeicon.png" style="width:20px" data-dismiss="modal" alt="closeicon">
+                </a>
+            </div>
+            <div class="modal-body px-5">
+                <form asp-action="UpdateSessionDefaultValues" id="frmUpdateSessionDefaultValues" name="frmUpdateSessionDefaultValues">
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="AvgTicketValue" class="col-form-label">Average Ticket Value <i class="text-danger">*</i></label>
+                            <input type="number" id="AvgTicketValue" name="AvgTicketValue" value="@avgTicketValue" class="form-control" onchange="checkForZero()">
+                            <span class="text-danger d-none avgTicketValidationField">AvgTicketValue is required and should be greater than 0</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="AvgMonthlyRetailValue" class="col-form-label">Average Plan Retail Value <i class="text-danger">*</i></label>
+                            <input type="number" id="AvgMonthlyRetailValue" name="AvgMonthlyRetailValue" value="@avgPlanRetailValue" class="form-control" onchange='checkForZero()'>
+                            <span class="text-danger d-none avgMonthlyRetailValueValidationField">AvgMonthlyRetailValue is required and should be greater than 0</span>
+                        </div>
+                    </div>
+                    <div class="row pt-3" align="center">
+                        <div class="group__submit">
+                            <input type="button" class="factors-btn darkPurpleBg-btn" data-dismiss="modal" value="SUBMIT">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header background-stnd-purple" style="background-color: #434da0">
+                <h5 class="modal-title" id="exampleModalLabel" style="color:white">YES! Email my Success Report.</h5>
+                <a href="#">
+                    <img src="img/closeicon.png" style="width:20px" data-dismiss="modal" alt="closeicon">
+                </a>
+            </div>
+            <div class="modal-body px-5">
+                @*<form asp-action="SendReport" id="frmSendReport" name="frmSendReport">
+                    <div class="row">
+                    <div class="col-6">
+                    <label for="FirstName" class="col-form-label">First Name <i class="text-danger">*</i></label>
+                    <input type="text" class="form-control" id="FirstName" name="FirstName" onchange="checkValuesForEmpty()">
+                    <span class="text-danger d-none firstNameValidationField">FirstName is required</span>
+                    </div>
+                    <div class="col-6">
+                    <label for="LastName" class="col-form-label">Last Name <i class="text-danger">*</i></label>
+                    <input type="text" class="form-control" id="LastName" name="LastName" onchange="checkValuesForEmpty()">
+                    <span class="text-danger d-none lastNameValidationField">Last Name is required</span>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-12">
+                    <label for="recipient-name" class="col-form-label">Email <i class="text-danger">*</i></label>
+                    <input type="text" class="form-control" id="Email" name="Email" onchange="checkValuesForEmpty()">
+                    <span class="text-danger d-none emailValidationField">Email is required</span>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-12">
+                    <label for="Email" class="col-form-label">Store <i class="text-danger">*</i></label>
+                    <input type="text" class="form-control" id="Store" name="Store" onchange="checkValuesForEmpty()">
+                    <span class="text-danger d-none storeValidationField">Store is required</span>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-12">
+                    <label for="Location" class="col-form-label">Location <i class="text-danger">*</i></label>
+                    <input type="text" class="form-control" id="Location" name="Location" onchange="checkValuesForEmpty()">
+                    <span class="text-danger d-none locationValidationField">Location is required</span>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-12">
+                    <label for="IsProductProtectionPlanOffered" class="col-form-label">Do you currently offer Product Protection Plans:</label>
+                    <div class="form-inline">
+                    <input type="hidden" class="form-control" id="IsProductProtectionPlanOffered" name="IsProductProtectionPlanOffered">
+                    <div class="form-check mr-2">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" onclick='checkFunction("Yes")'>
+                    <label class="form-check-label" for="exampleRadios1">
+                    Yes
+                    </label>
+                    </div>
+                    <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" onclick='checkFunction("No")'>
+                    <label class="form-check-label" for="exampleRadios2">
+                    No
+                    </label>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    <div class="row pt-3">
+                    <div class="col-12" align="center">
+                    <button class="btn background-stnd-purple px-3 py-2 rounded-pill userInfo-btn disabled" type="button" data-dismiss="modal" disabled>SUBMIT</button>
+                    </div>
+                    </div>
+                    </form>*@
+            </div>
+        </div>
+    </div>
+</div>

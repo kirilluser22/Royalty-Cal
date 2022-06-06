@@ -1,0 +1,123 @@
+﻿@model List<SummaryAnalysisModal>
+
+<div class="container">
+    <div class="success__head">
+        <h2>Your success projections.</h2>
+    </div>
+    <div class="outer__success">
+        <div class="success__bottom">
+            <p>The following shows a summary of financial potential:</p>
+            <div class="success__small">
+                <div class="elem__success--small">
+                    <div class="head__success">
+                        <h6>SmartOne Plan Revenue</h6>
+                        <img src="img/arrowsuccess.svg" alt="arrowsuccess">
+                    </div>
+                    <div class="content__success">
+                        @{int i = 1;}
+                        @foreach (var item in Model)
+                        {
+                            <div class="success__dropdown">
+                                <p>Year @i</p>
+                                <span>@item.NetSmartOneRevenue.ToCurrencyWholeNumber()</span>
+                            </div>
+                            ++i;
+                        }
+                    </div>
+                </div>
+
+                <div class="elem__success--small">
+                    <div class="head__success">
+                        <h6>With: Smarter Living Plans</h6>
+                        <img src="img/arrowsuccess.svg" alt="arrowsuccess">
+                    </div>
+                    <div class="content__success">
+                        @{i = 1;}
+                        @foreach (var item in Model)
+                        {
+                            <div class="success__dropdown">
+                                <p>Year @i</p>
+                                <span>@item.TotalRevenue.ToCurrencyWholeNumber()</span>
+                            </div>
+                            ++i;
+                        }
+                    </div>
+                </div>
+
+                <div class="elem__success--small">
+                    <div class="head__success">
+                        <h6>X Times Revenue Improvement</h6>
+                        <img src="img/arrowsuccess.svg" alt="arrowsuccess">
+                    </div>
+                    <div class="content__success">
+                        @{i = 1;}
+                        @foreach (var item in Model)
+                        {
+                            <div class="success__dropdown">
+                                <p>Year @i</p>
+                                <span>@item.MultipleTimesImprovementWithSlp.ToX()</span>
+                            </div>
+                            ++i;
+                        }
+                    </div>
+                </div>
+            </div>
+            <table>
+                <tr>
+                    <th></th>
+                    <th><p>Year 1</p></th>
+                    <th><p>Year 2</p></th>
+                    <th><p>Year 3</p></th>
+                    <th><p>Year 4</p></th>
+                    <th><p>Year 5</p></th>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td><h6>SmartOne Plan Revenue</h6></td>
+                        @foreach (var item in Model)
+                        {
+                            <td><p>@item.NetSmartOneRevenue.ToCurrencyWholeNumber()</p></td>
+                        }
+                    </tr>
+                    <tr>
+                        <td><h6>With: Smarter Living Plans</h6></td>
+                        @foreach (var item in Model)
+                        {
+                            <td><p>@item.TotalRevenue.ToCurrencyWholeNumber()</p></td>
+                        }
+                    </tr>
+                    <tr>
+                        <td><h6>X times Revenue Improvement</h6></td>
+                        @foreach (var item in Model)
+                        {
+                            <td><p>@item.MultipleTimesImprovementWithSlp.ToX()</p></td>
+                        }
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="success__top">
+            <div class="success__info">
+                <h6>DISCLAIMER</h6>
+                <p>Zucora Inc. has prepared the above projections based on certain factors provided, assumptions and information available from public sources that has not been independently verified. These projections are provided only for illustrative purposes, to assist with understanding, evaluating and assessing the Company's programs and potential results.</p>
+                <p>These projections, results and financial analysis are not guarantees of any current  or future performance and no reliance should be placed on them. These projections involve known and unknown risks with uncertainties and any actual results are likely to vary significantly.</p>
+            </div>
+            <div class="download__box">
+                <p>Explore the analysis of your success factors with a detailed assessment of your financial projections. Simply request your customized Success Report:</p>
+                <div class="success__download">
+                    <div class="inner__success--download">
+                        <div class="success__download--image">
+                            <img src="img/loyaltydownload.svg" alt="">
+                        </div>
+                        <div class="success__download--info">
+                            <p>Success Report</p>
+                            <a href="#">DOWNLOAD</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

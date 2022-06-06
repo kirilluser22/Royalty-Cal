@@ -1,0 +1,155 @@
+﻿
+:root {
+    --standard-purple: #434da0;
+}
+
+#ex1Slider .slider-selection {
+    background: var(--standard-purple);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    height: 7px;
+}
+
+
+/* .tooltip - background of tooltip */
+#ex1Slider .tooltip-inner {
+    background-color: white;
+    border-radius: 15px;
+    color: black;
+    margin-left: -3.5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+}
+
+#ex1Slider .tooltip {
+    z-index: 1001;
+}
+
+#ex1Slider .slider-handle {
+    background: var(--standard-purple);
+    width: 16px;
+    height: 16px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3), 0px 0px 1px rgba(13, 13, 13, 0.3);
+    border: 4px solid white;
+}
+
+/* This sets the color of the arrow that connects the tooltip to the handle */
+#ex1Slider .arrow {
+    border-top-color: white !important;
+    margin-left: -7px !important;
+    display: none !important;
+}
+
+.slider.slider-horizontal {
+    width: inherit !important;
+    height: 20px !important;
+}
+
+.grey__color {
+    color: #AFAFB7;
+}
+
+.float__right {
+    float: right;
+}
+
+.smarterPartner__Heading {
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+.smarterPartner__HeadingDesc {
+    margin-bottom: 40px;
+    color: #36384b;
+    font-size: 15px;
+    line-height: 23px;
+    font-weight: 400;
+    font-family: "AktivRegular",sans-serif;
+    opacity: .7
+}
+
+.apply__NowSection {
+    margin-top: 54px;
+    margin-bottom: 15px;
+}
+
+.apply__NowBtn {
+    background: transparent !important;
+    color: #a3acff !important;
+    font-weight: normal !important;
+    border: 2px solid #a3acff !important;
+}
+
+.annualRetailRevenue__Input {
+    width: 81px;
+    color: #434DA0;
+    font-size: 40px;
+    line-height: 40px;
+    font-family: "PublicoRegular",sans-serif;
+    font-weight: 400;
+}
+.calculate__range {
+    display:block !important;
+}
+.elem__calculate {
+    margin-bottom: 20px !important;
+}
+.calculate__inner {
+    padding: 30px 30px 10px 30px !important;
+}
+
+.apply__NowBtn {
+    background: transparent !important;
+    color: #a3acff !important;
+    font-weight: normal !important;
+    border: 2px solid #a3acff !important;
+
+
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    min-width: 137px;
+    min-height: 50px;
+    border-radius: 50px;
+    text-decoration: none;
+    -webkit-transition: .4s ease all;
+    transition: .4s ease all;
+    font-size: 14px;
+    line-height: 17px;
+    font-family: "AktivBold",sans-serif;
+    font-weight: bold;
+    position: relative;
+}
+.darkPurpleBg-btn {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    min-width: 137px;
+    min-height: 50px;
+    background: #434da0;
+    border-radius: 50px;
+    text-decoration: none;
+    -webkit-transition: .4s ease all;
+    transition: .4s ease all;
+    color: #fff;
+    font-size: 14px;
+    line-height: 17px;
+    font-family: "AktivBold",sans-serif;
+    font-weight: bold;
+    position: relative;
+    border: 2px;
+}
+.calculate__result__minWidth {
+    min-width: max-content;
+}

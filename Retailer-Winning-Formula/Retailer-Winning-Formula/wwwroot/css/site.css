@@ -1,0 +1,203 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+/* Range Slider css */
+/*@import "https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/8.5.1/nouislider.min.css";*/
+
+:root {
+    --standard-purple: #434da0;
+    --light-purple: #A3ACFF;
+    --light-blue: #F7F8FC;
+}
+.text-color-stnd-purple {
+    color: var(--standard-purple)
+}
+.text-color-light-purple {
+    color: var(--light-purple)
+}
+.font-weight-500 {
+    font-weight: 500 !important;
+}
+.font-weight-200 {
+    font-weight: 200 !important;
+}
+
+.background-stnd-purple, .background-stnd-purple:hover {
+    background-color: var(--standard-purple);
+    color: white;
+}
+
+.background-light-purple, .background-light-purple:hover {
+    background-color: var(--light-purple);
+    color: white;
+}
+.background-light-blue {
+    background-color: var(--light-blue);
+}
+.freeQuoteButton {
+    border-color: #A9FFD6 !important;
+    color: #A9FFD6 !important;
+}
+
+.loginBorder {
+    border-color: white !important
+}
+
+.step-border-left-radius {
+    border-radius: 10px 0px 0px 10px;
+}
+
+.step-border-right-radius {
+    border-radius: 0px 10px 10px 0px;
+}
+.checkbox-1x {
+    transform: scale(1.5);
+    -webkit-transform: scale(2);
+}
+/*.navbar-light {
+    background-color: var(--standard-purple) !important;
+    color: white !important;
+}*/
+.navbar-light .navbar-nav .nav-link {
+    color: white !important;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+    .navbar-light .navbar-nav .navbar-lg-font-size {
+        font-size: 10px;
+    }
+
+.navbar-light .navbar-brand {
+    color: white !important;
+}
+
+.border-purple {
+    border: 2px solid var(--standard-purple) !important;
+}
+.font-size-12px{
+    font-size:12px;
+}
+.font-size-15px {
+    font-size: 15px;
+}
+.font-size-14px {
+    font-size: 14px;
+}
+.font-size-20px {
+    font-size: 20px;
+}
+.font-size-25px {
+    font-size: 25px;
+}
+.font-size-40px {
+    font-size: 40px;
+}
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+#ex1Slider .slider-selection {
+    background: var(--standard-purple);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    height: 7px;
+}
+
+
+/* .tooltip - background of tooltip */
+#ex1Slider .tooltip-inner {
+    background-color: white;
+    border-radius: 15px;
+    color: black;
+    margin-left: -3.5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+}
+
+#ex1Slider .tooltip {
+    z-index: 1001;
+}
+
+#ex1Slider .slider-handle {
+    background: var(--standard-purple);
+    width: 16px;
+    height: 16px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3), 0px 0px 1px rgba(13, 13, 13, 0.3);
+    border: 4px solid white;
+}
+
+/* This sets the color of the arrow that connects the tooltip to the handle */
+#ex1Slider .arrow {
+    border-top-color: white !important;
+    margin-left: -7px !important;
+    display: none !important;
+}
+
+.slider.slider-horizontal {
+    width: inherit !important;
+}
+
+.font-size-45px {
+    font-size: 45px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}

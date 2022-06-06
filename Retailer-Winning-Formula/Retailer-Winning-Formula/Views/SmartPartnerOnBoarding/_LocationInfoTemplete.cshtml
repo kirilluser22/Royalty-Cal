@@ -1,0 +1,111 @@
+﻿@model LocationViewModel
+<div class="locationRow locationNo-@Model.RowNo" style="margin-top: 40px;border-top: 1px solid rgba(54, 56, 75, 0.1);">
+    <div class="double__group" style="margin-top: 30px;">
+        <div class="group__form">
+            <p>Location Name <span>*</span></p>
+            <input type="text" readonly id="LocationName-@Model.RowNo" name="LocationName-@Model.RowNo" class="locationName">
+        </div>
+        <div class="group__form">
+            <p>City <span>*</span></p>
+            <input type="text" readonly value="" id="LocationCity-@Model.RowNo" class="locationCity" name="LocationCity-@Model.RowNo">
+        </div>
+    </div>
+
+
+    <div class="double__group">
+        <div class="group__form">
+            <p>Annual Sales Volume</p>
+            <div class="group__dropdown">
+                <div class="dropdown__product">
+                    <a href="#" id="LocationAnnualSalesVolume-@Model.RowNo">Select sales volume range</a>
+                </div>
+                <div class="product__dropdown dropdown__radio" style="display:none;">
+                    <ul class="annualSalesVolumeDropDown-@Model.RowNo">
+                        @{
+                            int k = 0;
+                        }
+                        @foreach (var item in Model.AnnualSalesVolumes)
+                        {
+                            string value = item.UpperRange <= 1000000 ? "Less than " + item.UpperRange.ToString() : item.LowerRange.ToString() + "-" + item.UpperRange.ToString();
+                            <li>
+                                <div class="form-group" data-value="@value">
+                                    <input type="radio" id="annualSalesVolume-@Model.RowNo@k" class="dropdown__main--input annualSalesVolumeRadio" value="@item.Id" name="radio-@Model.RowNo">
+                                    <label for="annualSalesVolume-@Model.RowNo@k">@value</label>
+                                </div>
+                            </li>
+                            ++k;
+                        }
+                    </ul>
+                    <div class="product__other">
+                        <input type="text" placeholder="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="group__form">
+            <p>Province <span>*</span></p>
+            <input type="text" readonly value="" id="LocationProvince-@Model.RowNo" class="locationProvince" name="LocationProvince-@Model.RowNo">
+            <input hidden id="ProvinceCode-@Model.RowNo" class="locationProvinceCode" name="ProvinceCode-@Model.RowNo">
+        </div>
+    </div>
+    <div class="double__group">
+        <div class="group__form">
+            <p>Email <span>*</span></p>
+            <input type="text" value="" id="LocationEmail-@Model.RowNo" class="locationEmail" name="LocationEmail-@Model.RowNo">
+        </div>
+        <div class="group__form">
+            <p>Postal code <span>*</span></p>
+            <input type="text" id="PostalCode-@Model.RowNo" class="locationPostalCode" name="PostalCode-@Model.RowNo">
+        </div>
+    </div>
+    <div class="double__group">
+
+        <div class="group__form">
+            <p>Phone number <span>*</span></p>
+            <div class="phone__dropdown locationPhoneNoDropDown-@Model.RowNo">
+                <a href="#" id="LocationPhoneCode-@Model.RowNo"><span>+1</span></a>
+                <input type="text" value="" class="locationPhoneNo" id="LocationPhoneNo-@Model.RowNo" data-phoneDropDown="@Model.RowNo" name="LocationPhoneNo-@Model.RowNo" onkeypress="return isWholeNumber(this, event);" maxlength="10" @*onchange='checkLocationPhoneNumber("@Model.RowNo")'*@ @* onfocusout='checkLocationPhoneNumber("@Model.RowNo")'*@>
+                <div class="dropdown__code" style="display:none;">
+                    <ul>
+                        <li><a href="#">+123</a></li>
+                        <li><a href="#">+132</a></li>
+                        <li><a href="#">+11</a></li>
+                        <li><a href="#">+134</a></li>
+                        <li><a href="#">+1</a></li>
+                        <li><a href="#">+2</a></li>
+                        <li><a href="#">+4</a></li>
+                        <li><a href="#">+5</a></li>
+                    </ul>
+                </div>
+            </div>
+            @*<span class="locationPhoneValidationField-@Model.RowNo validationField d-none">PhoneNumber is required</span>*@
+        </div>
+        <div class="group__form">
+            <p>Country <span>*</span></p>
+            <input type="text" readonly value="" id="LocationCountry-@Model.RowNo" class="locationCountry" name="LocationCountry-@Model.RowNo">
+        </div>
+    </div>
+
+    <div class="double__group">
+        <div class="group__form">
+            <p>Address <span>*</span></p>
+            <input type="text" class="locationAddress" id="Address-@Model.RowNo" name="Address-@Model.RowNo" oninput="addressChange(@Model.RowNo)">
+        </div>
+        <div class="group__form">
+            <p>Timezone</p>
+            <div class="group__dropdown">
+                <div class="dropdown__timezone">
+                    <a href="#"><span class="timezone__flag"><img src="/img/newImgs/langicon.svg" alt="langicon"></span> <span class="timezone__text" data-timezoneId="" id="LocationTimeZone-@Model.RowNo"></span></a>
+                </div>
+                <div class="timezone__dropdown" style="display:none;">
+                    <ul>
+                        @foreach (var item in Model.TimeZones)
+                        {
+                            <li><a href="#"><span class="tz__flag"><img src="/img/newImgs/langicon.svg" alt="language"></span> <span class="tz__text" data-timezone="@item.Id">@item.Tzname</span><span class="tz__code">(@item.Abbreviation)</span></a></li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

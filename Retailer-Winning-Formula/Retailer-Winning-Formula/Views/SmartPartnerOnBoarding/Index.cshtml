@@ -1,0 +1,553 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="~/css/loader.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/onBoarding.css">
+    <style>
+        .validationField, .error {
+            font-family: "AktivMedium", sans-serif;
+            font-size: 13px;
+            color: red;
+        }
+
+        .d-none {
+            display: none;
+        }
+
+        .d-block {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="small__hint">
+        <div class="container">
+            <div class="outer__hint">
+                <a href="#">LOGIN</a>
+            </div>
+        </div>
+    </div>
+    <div class="float__droppable--content drop__dropdown1">
+        <div class="head__droppable--content">
+            <a href="#" class="back__head"><img src="~/img/newImgs/arrowbackfloat.svg" alt="arrowbackfloat"></a>
+            <p>smarter living plans</p>
+            <a href="#" class="close__modal">
+                <img src="~/img/newImgs/closeicon.png" alt="close">
+            </a>
+        </div>
+        <div class="content__droppable">
+            <div class="float__menu--list">
+                <ul>
+                    <li><a href="#">furniture plan</a></li>
+                    <li><a href="#">appliance plan</a></li>
+                    <li><a href="#">home systems plan</a></li>
+                </ul>
+            </div>
+
+            <div class="bottom__info--content">
+                <p>Smarter Living is about making life more convenient.</p>
+                <div class="float__image--content">
+                    <img src="~/img/newImgs/floatimage.png" alt="floatimage">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="float__menu">
+
+        <div class="float__menu--list">
+            <ul>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">PRODUCTS</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">SERVICE REQUEST</a></li>
+                <li class="droppable__float"><a href="#" data-drop="drop__dropdown1">smarter living plans</a></li>
+            </ul>
+        </div>
+    </div>
+    <header>
+        <div class="container-fluid">
+            <div class="outer__header">
+                <div class="header__logo">
+                    <a href="#"><img src="~/img/newImgs/headerlogo.png" alt="headerlogo"></a>
+                </div>
+                <div class="header__menu">
+                    <ul>
+                        <li><a href="#">ABOUT US</a></li>
+                        <li><a href="#">PRODUCTS</a></li>
+                        <li><a href="#">BLOG</a></li>
+                        <li><a href="#">SERVICE REQUEST</a></li>
+                        <li class="dropdown__header">
+                            <a href="#">SMARTER LIVING PLANS <span><img src="~/img/newImgs/menuarrow.svg" alt="menuarrow"></span></a>
+                            <div class="dropdown__box">
+                                <ul>
+                                    <li><a href="#">FURNITURE PLAN</a></li>
+                                    <li><a href="#">APPLIANCE PLAN</a></li>
+                                    <li><a href="#">HOME SYSTEMS PLAN</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__small">
+                    <div class="profile__header">
+                        <a href="#">
+                            <img src="~/img/newImgs/profileicon.svg" alt="profile">
+                        </a>
+                    </div>
+                    <div class="menu__button">
+                        <a href="#">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="hero__block" style="background:url('/img/newImgs/heroback.png')"></div>
+    <div class="info__container">
+        <div class="container">
+            <div class="outer__info">
+                <div class="info__head">
+                    <div class="logo__info">
+                        <img src="~/img/newImgs/logoimage.svg" alt="logoimage">
+                    </div>
+                    <p>
+                        It's easy to become a Smarter Partner with ZucoraHome.
+                        Simply complete the following information and
+                        following our review and acceptance,
+                        you will receive confirmation by email.
+                    </p>
+                    <p>Should you require assistance, please contact us at: 1.866.667.6695</p>
+                </div>
+                <div class="info__video">
+                    <img src="~/img/newImgs/infoback.png" alt="infoback">
+                    <a href="#"><img src="~/img/newImgs/playbutton.svg" alt="playbutton"></a>
+                    <iframe src="" data-src="https://www.youtube.com/embed/NTZHKAKgAa8?autoplay=1;muted=1" frameborder="0"></iframe>
+                </div>
+                <div class="info__switcher">
+                    <div class="switch__list">
+                        <ul>
+                            <li class="current__switch"><a href="#" data-switch="switch1">Contact information</a></li>
+                            <li><a href="#" data-switch="switch2">Business Information</a></li>
+                            <li><a href="#" data-switch="switch3">Location Information</a></li>
+                        </ul>
+                    </div>
+                    <div class="switch__container switch3" style="display:none">
+                        <div class="location__information">
+                            <h2>Location Information</h2>
+                            <form action="" id="frmLocationInfo">
+                                <div class="locationRow locationNo-0">
+                                    <div class="double__group">
+                                        <div class="group__form">
+                                            <p>Location Name <span>*</span></p>
+                                            <input type="text" readonly id="LocationName-0" name="LocationName-0" class="locationName">
+                                        </div>
+                                        <div class="group__form">
+                                            <p>City <span>*</span></p>
+                                            <input type="text" readonly value="" id="LocationCity-0" class="locationCity" name="LocationCity-0">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="double__group">
+                                        <div class="group__form">
+                                            <p>Annual Sales Volume</p>
+                                            <div class="group__dropdown">
+                                                <div class="dropdown__product">
+                                                    <a href="#" id="LocationAnnualSalesVolume-0">Select sales volume range</a>
+                                                </div>
+                                                <div class="product__dropdown dropdown__radio" style="display:none;">
+                                                    <ul class="annualSalesVolumeDropDown-0">
+                                                        @{
+                                                            int k = 0;
+                                                        }
+                                                        @foreach (var item in ViewBag.annualSalesVolume)
+                                                        {
+                                                            string value = item.UpperRange <= 1000000 ? "Less than " + item.UpperRange.ToString() : item.LowerRange.ToString() + "-" + item.UpperRange.ToString();
+                                                            <li>
+                                                                <div class="form-group" data-value="@value">
+                                                                    <input type="radio" id="annualSalesVolume-@k" class="dropdown__main--input annualSalesVolumeRadio" value="@item.Id" name="radio-0">
+                                                                    <label for="annualSalesVolume-@k">@value</label>
+                                                                </div>
+                                                            </li>
+                                                            ++k;
+                                                        }
+                                                    </ul>
+                                                    <div class="product__other">
+                                                        <input type="text" placeholder="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="group__form">
+                                            <p>Province <span>*</span></p>
+                                            <input type="text" readonly value="" id="LocationProvince-0" class="locationProvince" name="LocationProvince-0">
+                                            <input hidden id="ProvinceCode-0" class="locationProvinceCode" name="ProvinceCode-0">
+                                        </div>
+                                    </div>
+                                    <div class="double__group">
+                                        <div class="group__form">
+                                            <p>Email <span>*</span></p>
+                                            <input type="text" id="LocationEmail-0" class="locationEmail" name="LocationEmail-0">
+                                        </div>
+                                        <div class="group__form">
+                                            <p>Postal code <span>*</span></p>
+                                            <input type="text" id="PostalCode-0" class="locationPostalCode" name="PostalCode-0">
+                                        </div>
+                                    </div>
+                                    <div class="double__group">
+                                        <div class="group__form">
+                                            <p>Phone number <span>*</span></p>
+                                            <div class="phone__dropdown locationPhoneNoDropDown-0">
+                                                <a href="#" id="LocationPhoneCode-0"><span>+1</span></a>
+                                                <input type="text" value="" class="locationPhoneNo" data-phoneDropDown="0" id="LocationPhoneNo-0" name="LocationPhoneNo-0" maxlength="10" onkeypress="return isWholeNumber(this, event);" @*onchange='checkLocationPhoneNumber("0")'*@ @* onfocusout='checkLocationPhoneNumber("0")'*@>
+                                                <div class="dropdown__code" style="display:none;">
+                                                    <ul>
+                                                        <li><a href="#">+123</a></li>
+                                                        <li><a href="#">+132</a></li>
+                                                        <li><a href="#">+11</a></li>
+                                                        <li><a href="#">+134</a></li>
+                                                        <li><a href="#">+1</a></li>
+                                                        <li><a href="#">+2</a></li>
+                                                        <li><a href="#">+4</a></li>
+                                                        <li><a href="#">+5</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            @*<span class="locationPhoneValidationField-0 validationField d-none">PhoneNumber is required</span>*@
+                                        </div>
+                                        <div class="group__form">
+                                            <p>Country <span>*</span></p>
+                                            <input type="text" readonly value="" id="LocationCountry-0" class="locationCountry" name="LocationCountry-0">
+                                        </div>
+                                    </div>
+
+                                    <div class="double__group">
+                                        <div class="group__form">
+                                            <p>Address <span>*</span></p>
+                                            <input type="text" class="locationAddress" id="Address-0" name="LocationAddress" oninput="addressChange(0)">
+                                        </div>
+                                        <div class="group__form">
+                                            <p>Timezone</p>
+                                            <div class="group__dropdown">
+                                                <div class="dropdown__timezone">
+                                                    <a href="#"><span class="timezone__flag"><img src="/img/newImgs/langicon.svg" alt="langicon"></span> <span class="timezone__text" data-timezoneId="" id="LocationTimeZone-0"></span></a>
+                                                </div>
+                                                <div class="timezone__dropdown" style="display:none;">
+                                                    <ul class="locationTimezoneDropDown">
+                                                        @foreach (var item in ViewBag.timezones)
+                                                        {
+                                                            <li><a href="#"><span class="tz__flag"><img src="/img/newImgs/langicon.svg" alt="language"></span> <span class="tz__text" data-timezone="@item.Id">@item.Tzname</span><span class="tz__code">(@item.Abbreviation)</span></a></li>
+                                                        }
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="submit__complex">
+                                    <div class="lds-ring loader1 d-none"><div></div><div></div><div></div><div></div></div>
+                                    <div class="submit__left addLocationBtnSection">
+                                        <a href="#" class="locationInfoRow-AddBtn">+ add another location</a>
+                                        <p>
+                                            *At least one location
+                                            is required before continuing
+                                        </p>
+                                    </div>
+                                    <div class="submit__right">
+                                        <input type="button" class="locationInfo-saveBtn" value="SAVE">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="switch__container switch1">
+                    <div class="contact__information--block">
+                        <h2>Contact Information</h2>
+                        <form action="" id="frmContactInfo">
+                            <div class="double__group">
+                                <div class="group__form">
+                                    <p>First Name <span>*</span></p>
+                                    <input type="text" value="" id="FirstName" name="FirstName" @*onfocusout="checkContactFirstName()" onchange="checkContactFirstName()"*@>
+                                    @*<span class="contactFirstNameValidationField validationField d-none">FirstName is required</span>*@
+                                </div>
+                                <div class="group__form">
+                                    <p>Phone number <span>*</span></p>
+                                    <div class="phone__dropdown contactPhoneDropDown">
+                                        <a href="#"><span class="contactInfo_PhoneCode">+1</span></a>
+                                        <input type="text" id="PhoneNumber" name="PhoneNumber" maxlength="10" onkeypress="return isWholeNumber(this, event);" @*onfocusout="checkContactPhoneNumber()"*@ @*onchange="checkContactPhoneNumber()"*@>
+                                        <div class="dropdown__code" style="display:none;">
+                                            <ul>
+                                                <li><a href="#">+123</a></li>
+                                                <li><a href="#">+132</a></li>
+                                                <li><a href="#">+11</a></li>
+                                                <li><a href="#">+134</a></li>
+                                                <li><a href="#">+1</a></li>
+                                                <li><a href="#">+2</a></li>
+                                                <li><a href="#">+4</a></li>
+                                                <li><a href="#">+5</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    @*<span class="contactPhoneValidationField validationField d-none">Phone Number is required</span>*@
+                                </div>
+                            </div>
+
+                            <div class="double__group">
+                                <div class="group__form">
+                                    <p>Last Name <span>*</span></p>
+                                    <input type="text" value="" id="LastName" name="LastName" @* onfocusout="checkContactLastName()" onchange="checkContactLastName()"*@>
+                                    @*<span class="contactLastNameValidationField validationField d-none">LastName is required</span>*@
+                                </div>
+                                <div class="group__form">
+                                    <p>Email <span>*</span></p>
+                                    <input type="text" id="Email" name="Email" @* onfocusout="checkContactEmail()" onchange="checkContactEmail()"*@>
+                                    @*<span class="contactEmailValidationField validationField d-none">Email is required</span>*@
+                                </div>
+                            </div>
+
+
+                            <div class="double__group">
+                                <div class="group__form">
+                                    <p>Language</p>
+                                    <div class="group__dropdown">
+                                        <div class="dropdown__default contactInfo_Language">
+                                            <a href="#"></a>
+                                        </div>
+                                        <div class="default__dropdown" style="display:none;">
+                                            <ul class="contact_Language">
+                                                @foreach (var item in ViewBag.languages)
+                                                {
+                                                    <li><a href="#" data-value="@item.Id">@item.Name</a></li>
+                                                }
+                                                @*<li><a href="#">CAD-English1</a></li>
+                                                    <li><a href="#">CAD-English2</a></li>
+                                                    <li><a href="#">CAD-English3</a></li>
+                                                    <li><a href="#">CAD-English4</a></li>
+                                                    <li><a href="#">CAD-English5</a></li>
+                                                    <li><a href="#">CAD-English7</a></li>
+                                                    <li><a href="#">CAD-English6</a></li>*@
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="group__submit">
+                                <input type="button" class="contactInfo-saveBtn" value="SAVE">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+
+                <div class="switch__container switch2" style="display:none;">
+                    <div class="partner__information--block">
+                        <h2>Partner Information</h2>
+                        <h6>Already do business with ZucoraHome?</h6>
+                        <div class="form-group">
+                            <input type="checkbox" id="partnerCheckbox">
+                            <label for="partnerCheckbox">I am already a partner with ZucoraHome</label>
+                        </div>
+                        <div class="spacer"></div>
+                        <form action="">
+                            <div class="group__form">
+                                <div class="partner__title">
+                                    <p>Partner ID Number</p>
+                                    <div class="partner__hint">
+                                        <span><img src="~/img/newImgs/infoicon.svg" alt="infoicon"></span>
+                                        <div class="partner__block" style="display:none;">
+                                            <h6>Partner ID</h6>
+                                            <p>Your Partner ID Number is used to fill the following fields based on information we have on file.</p>
+                                            <p>
+                                                Enter your Partner ID Number. (If not known,
+                                                contact your ZucoraHome Representative or
+                                                send email requesting your number to: <br>
+                                                <a href="mailto:smarterpartner@zucorahome.com">smarterpartner@zucorahome.com</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <input type="text" maxlength="8" id="existingPartnerId" disabled name="existingPartnerId">
+                                <div class="error__field" style="display:none;">
+                                    <p>Sorry, Partner ID Not Found</p>
+                                </div>
+                            </div>
+                            <div class="submit__partner">
+                                <input type="submit" class="getMarketPartner" value="CONFIRM">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="business__information--block">
+                        <h2>Business Information</h2>
+                        <form action="" id="frmBusinessInfo">
+                            <div class="double__group">
+                                <div class="group__form">
+                                    <p>Store Name <span>*</span></p>
+                                    <input type="text" id="StoreName" name="StoreName" onchange="pasteToLocationName()">
+                                </div>
+                                <div class="group__form">
+                                    <p>Partner ID#</p>
+                                    <input type="text" value="" id="PartnerId" name="PartnerId" maxlength="8">
+                                </div>
+                            </div>
+
+                            <div class="double__group">
+                                <div class="group__form">
+                                    <p>Business Legal Name <span>*</span></p>
+                                    <input type="text" id="BusinessLegalName" name="BusinessLegalName">
+                                </div>
+                                <div class="group__form">
+                                    <p>Currency</p>
+                                    <div class="group__dropdown">
+                                        <div class="dropdown__timezone">
+                                            <a href="#"><span class="timezone__flag"><img src="~/img/newImgs/langicon.svg" alt="langicon"></span> <span class="timezone__text businessInfo_Currency"></span></a>
+                                        </div>
+                                        <div class="timezone__dropdown" style="display:none;">
+                                            <ul class="currencyDropDown">
+                                                @foreach (var item in ViewBag.currencies)
+                                                {
+                                                    <li>
+                                                        <a href="#" class="currencyList">
+                                                            <span class="tz__flag">
+                                                                <img src="~/img/newImgs/langicon.svg" alt="language">
+                                                            </span>
+                                                            <span class="tz__text">
+                                                                <span data-value="@item.Id">@item.Isocode</span>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                }
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="double__group">
+                                <div class="group__form">
+                                    <p>Products and Services</p>
+                                    <div class="group__dropdown">
+                                        <div class="dropdown__product">
+                                            <a href="#" class="businessInfo_ProductServices">Select all that apply</a>
+                                        </div>
+                                        <div class="product__dropdown" style="display:none;">
+                                            <ul class="prodAndServices">
+                                                @{
+                                                    int i = 0;
+                                                }
+                                                @foreach (var item in ViewBag.productAndServices)
+                                                {
+                                                    <li>
+                                                        <div class="form-group" data-value="@item.Category">
+                                                            <input type="checkbox" id="prodService-@i" class="dropdown__main--input">
+                                                            <label for="prodService-@i">@item.Category</label>
+                                                            <input type="hidden" id="prodServiceId-@i" value="@item.Id">
+                                                        </div>
+                                                    </li>
+                                                    ++i;
+                                                }
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="group__form">
+                                    <p>Buying Group <span class="grey__tooltip">(If Aplicable)</span></p>
+                                    <div class="group__dropdown">
+                                        <div class="dropdown__product">
+                                            <a href="#" class="businessInfo_BuyingGroup">Select all that apply</a>
+                                        </div>
+                                        <div class="product__dropdown" style="display:none;">
+                                            <ul class="buyingGroup">
+                                                @{
+                                                    int j = 0;
+                                                }
+                                                @foreach (var item in ViewBag.buyingGroup)
+                                                {
+                                                    <li>
+                                                        <div class="form-group" data-value="@item.GroupName">
+                                                            <input type="checkbox" id="buyingGroup-@j" class="dropdown__main--input">
+                                                            <label for="buyingGroup-@j">@item.GroupName</label>
+                                                            <input type="hidden" id="buyingGroupId-@j" value="@item.Id">
+                                                        </div>
+                                                    </li>
+                                                    ++j;
+                                                }
+                                            </ul>
+                                            <div class="product__other">
+                                                <input type="text" placeholder="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="group__submit">
+                                <input type="button" class="businessInfo-saveBtn" value="SAVE">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="modal" id="msgModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #434da0">
+                    <h5 class="modal-title" style="color:white">Message</h5>
+                    <a href="#">
+                        <img src="~/img/closeicon.png" style="width:20px" data-dismiss="modal" alt="closeicon">
+                    </a>
+                </div>
+                <div class="modal-body" id="msgNotifierBody">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="keysList">
+        <input hidden id="contactInfoId" name="contactInfoId" />
+        <input hidden id="businessInfoId" name="businessInfoId" />
+        <div class="locationKeyList"></div>
+        <div class="subBusinessInfoKeyList"></div>
+    </div>
+    @*informationReview start*@
+    @{
+        await Html.RenderPartialAsync("_InformationReview");
+        await Html.RenderPartialAsync("_Congrat");
+    }
+    @*informationReview end*@
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/script.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="~/js/onBoarding.js"></script>
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7QegStMXvxJBDUUi-54a37TcPvgsC7i8&amp;libraries=places&amp;ver=5.8.2#asyncload"
+            id="GoogleApi-js"></script>
+</body>
+</html>

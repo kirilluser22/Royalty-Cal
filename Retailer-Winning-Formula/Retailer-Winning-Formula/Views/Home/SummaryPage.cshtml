@@ -1,0 +1,234 @@
+﻿@model List<SummaryAnalysisModal>
+@{
+    ViewData["Title"] = "SummaryPage";
+}
+<input type="hidden" value="@ViewBag.isSuccess" id="isSuccess" />
+<div class="p-5">
+    <div class="text-left">
+        <h1 class="display-4 text-color-stnd-purple">Your success projections</h1>
+        <p class="font-weight-500 mt-3">The following shows a summary of financial potential</p>
+    </div>
+    @if (Model != null && Model.Any())
+    {
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th class="font-weight-500 text-center">Year 1</th>
+                    <th class="font-weight-500 text-center">Year 2</th>
+                    <th class="font-weight-500 text-center">Year 3</th>
+                    <th class="font-weight-500 text-center">Year 4</th>
+                    <th class="font-weight-500 text-center">Year 5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="font-weight-500 text-color-stnd-purple">SmartOne Plan Revenue</td>
+
+                    @foreach (var item in Model)
+                    {
+                        <td class="text-center">@item.NetSmartOneRevenue.ToAmount()</td>
+                    }
+                </tr>
+                <tr>
+                    <td class="font-weight-500 text-color-stnd-purple">With: Smarter Living Plans</td>
+                    @foreach (var item in Model)
+                    {
+                        <td class="text-center">@item.SmarterLivingRecuringRevenue.ToAmount()</td>
+                    }
+                </tr>
+                <tr>
+                    <td class="font-weight-500 text-color-stnd-purple">X times Revenue Improvement</td>
+                    @foreach (var item in Model)
+                    {
+                        <td class="text-center">@item.MultipleTimesImprovementWithSlp.ToX()</td>
+                    }
+                </tr>
+            </tbody>
+        </table>
+    }
+
+
+    <div class="row mt-5">
+        <div class="col-7">
+            <label class="h4">DISCLAIMER</label>
+            <p class="text-muted">
+                when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+            <p class="text-muted">
+                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+        </div>
+        <div class="col-1"></div>
+        <div class="col-4 px-4">
+            <p class="text-muted">
+                sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+            <div class="card shadow py-3 mx-3">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6" align="right">
+                            <img src="~/logo/detailedReportIcon.png" />
+                        </div>
+                        <div class="col-6">
+                            <p class="font-weight-500 px-1">Success Report</p>
+                            <button class="btn background-stnd-purple px-3 py-2 rounded-pill" data-toggle="modal" data-target="#exampleModal">DOWNLOAD</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*modal*@
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header background-stnd-purple">
+                <h5 class="modal-title" id="exampleModalLabel">YES! Email my Success Report.</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="text-white">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body px-5">
+                <form asp-action="SendReport" id="frmSendReport" name="frmSendReport">
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="FirstName" class="col-form-label">First Name <i class="text-danger">*</i></label>
+                            <input type="text" class="form-control" id="FirstName" name="FirstName" onchange="checkValuesForEmpty()">
+                            <span class="text-danger d-none firstNameValidationField">FirstName is required</span>
+                        </div>
+                        <div class="col-6">
+                            <label for="LastName" class="col-form-label">Last Name <i class="text-danger">*</i></label>
+                            <input type="text" class="form-control" id="LastName" name="LastName" onchange="checkValuesForEmpty()">
+                            <span class="text-danger d-none lastNameValidationField">Last Name is required</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="recipient-name" class="col-form-label">Email <i class="text-danger">*</i></label>
+                            <input type="text" class="form-control" id="Email" name="Email" onchange="checkValuesForEmpty()">
+                            <span class="text-danger d-none emailValidationField">Email is required</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="Email" class="col-form-label">Store <i class="text-danger">*</i></label>
+                            <input type="text" class="form-control" id="Store" name="Store" onchange="checkValuesForEmpty()">
+                            <span class="text-danger d-none storeValidationField">Store is required</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="Location" class="col-form-label">Location <i class="text-danger">*</i></label>
+                            <input type="text" class="form-control" id="Location" name="Location" onchange="checkValuesForEmpty()">
+                            <span class="text-danger d-none locationValidationField">Location is required</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="IsProductProtectionPlanOffered" class="col-form-label">Do you currently offer Product Protection Plans:</label>
+                            <div class="form-inline">
+                                <input type="hidden" class="form-control" id="IsProductProtectionPlanOffered" name="IsProductProtectionPlanOffered">
+                                <div class="form-check mr-2">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" onclick='checkFunction("Yes")'>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        Yes
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" onclick='checkFunction("No")'>
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pt-3">
+                        <div class="col-12" align="center">
+                            <button class="btn background-stnd-purple px-3 py-2 rounded-pill userInfo-btn disabled" disabled>SUBMIT</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="msgModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Message</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Report sent Successfully</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script>
+        function checkFunction(param) {
+            if (param == "Yes")
+                $('#IsProductProtectionPlanOffered').val(true);
+            else
+                $('#IsProductProtectionPlanOffered').val(false);
+        }
+        function checkValuesForEmpty() {
+            let val1 = $("#FirstName").val().trim();
+            let val2 = $("#LastName").val().trim();
+            let val3 = $("#Email").val().trim();
+            let val4 = $("#Store").val().trim();
+            let val5 = $("#Location").val().trim();
+            if (val1 == null || val1 == "" || val2 == null || val2 == "" || val3 == null || val3 == "" || val4 == null || val4 == "" || val5 == null || val5 == "") {
+                $(".userInfo-btn").addClass("disabled");
+                $(".userInfo-btn").prop("disabled", true);
+            }
+            else {
+                $(".userInfo-btn").removeClass("disabled");
+                $(".userInfo-btn").prop("disabled", false);
+            }
+
+            if (val1 == null || val1 == "")
+                $(".firstNameValidationField").removeClass("d-none")
+            else
+                $(".firstNameValidationField").addClass("d-none")
+
+            if (val2 == null || val2 == "")
+                $(".lastNameValidationField").removeClass("d-none")
+            else
+                $(".lastNameValidationField").addClass("d-none")
+
+            if (val3 == null || val3 == "")
+                $(".emailValidationField").removeClass("d-none")
+            else
+                $(".emailValidationField").addClass("d-none")
+
+            if (val4 == null || val4 == "")
+                $(".storeValidationField").removeClass("d-none")
+            else
+                $(".storeValidationField").addClass("d-none")
+
+            if (val5 == null || val5 == "")
+                $(".locationValidationField").removeClass("d-none")
+            else
+                $(".locationValidationField").addClass("d-none")
+        }
+    </script>
+    <script>
+        if ($("#isSuccess").val() == "true")
+            $("#msgModal").modal();
+
+    </script>
+
+}

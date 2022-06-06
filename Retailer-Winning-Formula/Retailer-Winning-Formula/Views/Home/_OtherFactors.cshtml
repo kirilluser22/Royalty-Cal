@@ -1,0 +1,15 @@
+﻿@model DefaultValuesUpdateModal
+<tr>
+    <td><p>Average Ticket Value</p></td>
+    <td>
+        <span>@Model.AvgTicketValue.ToAmount()</span>
+        <input type="hidden" id="sessionavgTicketValue" value="@Model.AvgTicketValue" />
+    </td>
+</tr>
+<tr>
+    <td><p>Average Plan Retail Value</p></td>
+    <td>
+        <span>@Model.AvgMonthlyRetailValue.ToAmount()</span>
+        <input type="hidden" id="sessionavgRetailValue" value="@Model.AvgMonthlyRetailValue" />
+    </td>
+</tr>
